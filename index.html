@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>منصة TMC2 - إدارة المبادرات</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+    form { background: #f4f4f4; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+    .field { margin-bottom: 15px; }
+    input { width: 100%; padding: 8px; margin-top: 5px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ddd; padding: 12px; text-align: right; }
+    th { background-color: #004a99; color: white; }
+    tr:nth-child(even) { background-color: #f9f9f9; }
+  </style>
+</head>
+<body>
+
+<div id="app">
+  <h1>إضافة مبادرة جديدة</h1>
+  <form id="tmcForm">
+    <div class="field">
+      <label>البرنامج:</label>
+      <input type="text" id="program" required placeholder="ادخلي اسم البرنامج">
+    </div>
+    <div class="field">
+      <label>المبادرة:</label>
+      <input type="text" id="initiative" required placeholder="ادخلي اسم المبادرة">
+    </div>
+    <div class="field">
+      <label>تاريخ البدء:</label>
+      <input type="date" id="startdate" required>
+    </div>
+    <button type="submit">إرسال البيانات</button>
+  </form>
+
+  <hr>
+
+  <h2>قائمة المبادرات الحالية</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>البرنامج</th>
+      <th>المبادرة</th>
+      <th>تاريخ البدء</th>
+    </tr>
+    </thead>
+    <tbody id="dataBody">
+    <!-- البيانات ستظهر هنا برمجياً -->
+    </tbody>
+  </table>
+</div>
+
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>
