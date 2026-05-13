@@ -16,41 +16,8 @@
 </head>
 <body>
 
-<div id="app">
-  <h1>إضافة مبادرة جديدة</h1>
-  <form id="tmcForm">
-    <div class="field">
-      <label>البرنامج:</label>
-      <input type="text" id="program" required placeholder="ادخلي اسم البرنامج">
-    </div>
-    <div class="field">
-      <label>المبادرة:</label>
-      <input type="text" id="initiative" required placeholder="ادخلي اسم المبادرة">
-    </div>
-    <div class="field">
-      <label>تاريخ البدء:</label>
-      <input type="date" id="startdate" required>
-    </div>
-    <button type="submit">إرسال البيانات</button>
-  </form>
+<div id="root"></div>
 
-  <hr>
-
-  <h2>قائمة المبادرات الحالية</h2>
-  <table>
-    <thead>
-    <tr>
-      <th>البرنامج</th>
-      <th>المبادرة</th>
-      <th>تاريخ البدء</th>
-    </tr>
-    </thead>
-    <tbody id="dataBody">
-    <!-- البيانات ستظهر هنا برمجياً -->
-    </tbody>
-  </table>
-</div>
-
-<script type="module" src="/src/main.ts"></script>
+<script type="module" src="/src/main.jsx"></script>
 </body>
 </html>

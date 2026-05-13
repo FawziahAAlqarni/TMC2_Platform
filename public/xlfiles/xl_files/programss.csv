@@ -1,0 +1,58 @@
+﻿KPI1_ID,KPI2_ID,KPI3_ID,KPI4_ID,pr_id,pr_name,portfolio,Column1
+kpi_46,kpi_45,kpi_47,0,HA-3,برنامج تحسين الوصول الى الرعاية الصحية,HA portfolio,Average length of stay
+kpi_55,kpi_54,0,0,HA-5, برنامج تحسين الكفاءة والاستدامة المالية,HA portfolio,Average cost of operating the bed
+kpi_55,0,0,0,HA-6,برنامج التحول المؤسسي ,HA portfolio,Average cost of operating the bed
+kpi_58,kpi_59,0,0,HA-8,برنامج تطوير عمليات الموارد البشرية  ,HA portfolio,Dropout rate for health affairs
+kpi_58,kpi_59,0,0,HA-9,برنامج تنمية الكادر الإداري ,HA portfolio,Dropout rate for health affairs
+kpi_58,kpi_57,0,0,HA-10,برنامج ازدهار  ورفاهية منسوبي الشؤون الصحية,HA portfolio,Dropout rate for health affairs
+kpi_42,kpi_41,0,0,HA-1,برنامج تأسيس وتطوير  البنية التحتية للرعاية الوقائية,HA portfolio,Average waiting times for primary care
+kpi_40,0,0,0,HA-2,برنامج تفعيل الرعاية الوقائية ,HA portfolio,Percentage of early detection of chronic diseases among beneficiaries
+kpi_49,0,0,0,HA-4,برنامج تعزيز جودة الرعاية الصحية,HA portfolio,Readmission rate
+kpi_43,0,0,0,HA-11,برامج رفع الجاهزية  الطبية ضد الكوارث,HA portfolio,Number of annual disaster simulations and drills
+kpi_52,0,0,0,HA-7,برنامج  التميز البحثي والابتكار,HA portfolio,Number of publications per research faculty and physician
+kpi_21,0,0,0,EA-1,برنامج تطوير السياسات والإجراءات المتكاملة,EA portfolio,Level of completion of target operating model activation
+kpi_21,0,0,0,EA-10,برنامج تحقيق التميز المؤسسي,EA portfolio,Level of completion of target operating model activation
+kpi_20,kpi_17,0,0,EA-11,برنامج رفع كفاءة التحليل الاستراتيجي للوزارة والمواءمة مع منظومة الأمن والدفاع,EA portfolio,Level of service level agreement activation for intelligence information exchange.
+kpi_26,0,0,0,EA-12,برنامج تطوير البنية التحتية لمراكز البيانات والتطبيقات,EA portfolio,Percentage of users' satisfaction with digital services
+kpi_30,kpi_26,0,0,EA-13,برنامج التحول الرقمي,EA portfolio,Percentage of automated procedures
+kpi_26,0,0,0,EA-14,برنامج رفع كفاءة الخدمات الرقمية والتقنية,EA portfolio,Percentage of users' satisfaction with digital services
+kpi_26,0,0,0,EA-15,برنامج رفع كفاءة إدارة وحوكمة البيانات,EA portfolio,Percentage of users' satisfaction with digital services
+kpi_08,0,0,0,EA-16,برنامج تطوير قدرات الاتصالات العسكرية,EA portfolio,Percentage of units associated with the command and control system
+kpi_23,0,0,0,EA-17,برنامج تطوير وإدارة الأصول السيبرانية,EA portfolio,Percentage of cyber attacks prevented
+kpi_22,0,0,0,EA-18,برنامج التميز في تقديم خدمات الأمن السيبراني,EA portfolio,Percentage of compliance with cybersecurity policies and standards
+kpi_23,0,0,0,EA-19,برنامج رفع كفاءة الوقاية من الحوادث السيبرانية والاستجابة لها,EA portfolio,Percentage of cyber attacks prevented
+kpi_21,0,0,0,EA-2,برنامج تعزيز الجاهزية للتحول,EA portfolio,Level of completion of target operating model activation
+kpi_31,0,0,0,EA-3,برنامج دراسة وتطوير البنية التحتية للشؤون التنفيذية,EA portfolio,Rate of achievement of workplace facilities quality
+kpi_24,0,0,0,EA-4,برنامج تطوير المشتريات والتسليح,EA portfolio,Percentage of commitment to the financial budget
+kpi_25,0,0,0,EA-5,برنامج رفع كفاءة إدارة المحافظ والمشاريع,EA portfolio,Project execution success rate
+kpi_24,kpi_28,0,0,EA-6,برنامج رفع كفاءة التخطيط المالي,EA portfolio,Percentage of commitment to the financial budget
+kpi_29,0,0,0,EA-7,برنامج رفع فاعلية اتخاذ القرار,EA portfolio,"Closure rate of governance, risk, and compliance observations within the specified timeframe"
+kpi_21,0,0,0,EA-8,رفع كفاءة وجودة الخدمات الممكنة في وزارة الحرس الوطني,EA portfolio,Level of completion of target operating model activation
+kpi_29,0,0,0,EA-9,برنامج إدارة المخاطر والامتثال,EA portfolio,"Closure rate of governance, risk, and compliance observations within the specified timeframe"
+kpi_21,0,0,0,EA-20,برنامج تعزيز قدرات التواصل الداخلي والإعلام,EA portfolio,Level of completion of target operating model activation
+kpi_35,kpi_36,0,0,EA-21,برنامج تطوير رأس المال البشري,EA portfolio,Rate of civilian employees as a percentage of total staff
+kpi_34,kpi_33,kpi_32,0,EA-22,برنامج تطوير القدرات وتنمية المهارات,EA portfolio,Number of trainees
+kpi_38,0,0,0,EA-23,برنامج تمكين تحول وزارة الحرس الوطني,EA portfolio,Percentage of awareness of the target audience of the transformation journey and its objectives
+kpi_72,kpi_67,0,0,EA-25,رفع مستوى اعتزاز ووعي منسوبي الوزارة,EA portfolio,Number of programs dedicated to promoting the Ministry's values
+#N/A,0,0,0,EA-TBD,يتم تحديدها لاحقا,EA portfolio,0
+kpi_02,0,0,0,MA-1,برنامج تعزيز قدرات الجمع والتحليل الاستخباراتي,MA portfolio,Level of completeness of organizational units responsible for force building
+kpi_10,0,0,0,MA-2,برنامج تعزيز قدرات الطب العسكري الميداني,MA portfolio,Percentage of Completion of specialized medical capacity and field hospitals
+kpi_10,0,0,0,MA-3,برنامج الكفاءة والتميز  للطب العسكري الميداني,MA portfolio,Percentage of Completion of specialized medical capacity and field hospitals
+kpi_20,kpi_19,kpi_18,kpi_17,MA-4,برنامج التكامل مع شركاء المنظومة,MA portfolio,Level of service level agreement activation for intelligence information exchange.
+kpi_04,0,0,0,MA-5,برنامج التميز العملياتي,MA portfolio,Percentage of tasks exited
+kpi_01,0,0,0,MA-6,تعزيز الجاهزية والتفوق في تنفيذ المهام,MA portfolio,Level of readiness of forces to carry out future missions
+kpi_05,0,0,0,MA-7,برنامج هيكلة وتموضع قوات وزارة الحرس الوطني,MA portfolio,Percentage of military forces assigned to the main targeted missions
+kpi_03,0,0,0,MA-8,برنامج تعزيز كفاءة القوات,MA portfolio,Efficiency ratio of the use of forces
+kpi_07,0,0,0,MA-9,برنامج تطوير الكليات العسكرية,MA portfolio,Percentage of units that are satisfied with military education and training outputs
+kpi_02,0,0,0,MA-10,برنامج تأسيس وتطوير العقيدة والتدريب,MA portfolio,Level of completeness of organizational units responsible for force building
+kpi_07,0,0,0,MA-11,برنامج تحسين وتخطيط التدريب,MA portfolio,Percentage of units that are satisfied with military education and training outputs
+kpi_02,0,0,0,MA-12,برنامج إدارة القوى البشرية,MA portfolio,Level of completeness of organizational units responsible for force building
+kpi_06,0,0,0,MA-13,برنامج تعزيز قدرات الأمن والسلامة,MA portfolio,Number of security and safety violations
+kpi_08,0,0,0,MA-14,برنامج تعزيز قدرات الاتصالات,MA portfolio,Percentage of units associated with the command and control system
+kpi_05,0,0,0,MA-15,برنامج تطوير الأفواج,MA portfolio,Percentage of military forces assigned to the main targeted missions
+kpi_01,0,0,0,MA-16,برنامج تعزيز التخطيط العملياتي,MA portfolio,Level of readiness of forces to carry out future missions
+kpi_02,0,0,0,MA-17,برنامج تطوير الخدمات اللوجستية,MA portfolio,Level of completeness of organizational units responsible for force building
+kpi_21,0,0,0,MA-18,تطوير المنظومة القيادية في الجهاز العسكري,MA portfolio,Level of completion of target operating model activation
+kpi_21,0,0,0,MA-19,برنامج التميز المؤسسي العسكري,MA portfolio,Level of completion of target operating model activation
+kpi_02,0,0,0,MA-20,برنامج تطوير وتكامل القدرات,MA portfolio,Level of completeness of organizational units responsible for force building
+,0,0,0,EA-24,برنامج توطين الصناعات العسكرية ورفع مستوى المحتوى المحلي,EA portfolio,
