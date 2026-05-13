@@ -131,26 +131,6 @@ const SystemInput = () => {
         ))}
       </div>
 
-      {/* ===== إحصائيات Change Tolerence ===== */}
-      {activeTab === "tolerence" && tolRecords.length > 0 && (() => {
-        const waveCounts = waves.reduce((a, w) => ({ ...a, [w]: tolRecords.filter(r => r.wave === w).length }), {});
-        const avgImpact = (tolRecords.reduce((s, r) => s + parseFloat(r.overall_impact || 0), 0) / tolRecords.length).toFixed(2);
-        const uniqueBUs = new Set(tolRecords.map(r => r.impacted_bu)).size;
-        return (
-          <div style={S.statsGrid}>
-            <div style={S.statCard}><div style={S.statNum}>{tolRecords.length}</div><div style={S.statLbl}>إجمالي السجلات</div></div>
-            <div style={S.statCard}><div style={S.statNum}>{uniqueBUs}</div><div style={S.statLbl}>وحدات أعمال متأثرة</div></div>
-            <div style={S.statCard}><div style={S.statNum}>{avgImpact}%</div><div style={S.statLbl}>متوسط التأثير</div></div>
-            {waves.map(w => (
-              <div key={w} style={{ ...S.statCard, background: "#f0faf4" }}>
-                <div style={S.statNum}>{waveCounts[w] || 0}</div>
-                <div style={S.statLbl}>{w}</div>
-              </div>
-            ))}
-          </div>
-        );
-      })()}
-
       {activeTab === "tolerence" && (
         <>
           <form onSubmit={handleSaveTol} style={S.form}>
@@ -177,6 +157,25 @@ const SystemInput = () => {
             </div>
             <button type="submit" style={S.submitBtn} disabled={loading}>{loading ? "..." : "\uD83D\uDCBE \u062d\u0641\u0638"}</button>
           </form>
+
+          {tolRecords.length > 0 && (() => {
+            const waveCounts = waves.reduce((a, w) => ({ ...a, [w]: tolRecords.filter(r => r.wave === w).length }), {});
+            const avgImpact = (tolRecords.reduce((s, r) => s + parseFloat(r.overall_impact || 0), 0) / tolRecords.length).toFixed(2);
+            const uniqueBUs = new Set(tolRecords.map(r => r.impacted_bu)).size;
+            return (
+              <div style={S.statsGrid}>
+                <div style={S.statCard}><div style={S.statNum}>{tolRecords.length}</div><div style={S.statLbl}>إجمالي السجلات</div></div>
+                <div style={S.statCard}><div style={S.statNum}>{uniqueBUs}</div><div style={S.statLbl}>وحدات أعمال متأثرة</div></div>
+                <div style={S.statCard}><div style={S.statNum}>{avgImpact}%</div><div style={S.statLbl}>متوسط التأثير</div></div>
+                {waves.map(w => (
+                  <div key={w} style={{ ...S.statCard, background: "#f0faf4" }}>
+                    <div style={S.statNum}>{waveCounts[w] || 0}</div>
+                    <div style={S.statLbl}>{w}</div>
+                  </div>
+                ))}
+              </div>
+            );
+          })()}
 
           <div style={S.tableBox}>
             <div style={S.tableHdr}>
@@ -218,26 +217,6 @@ const SystemInput = () => {
         </>
       )}
 
-      {/* ===== إحصائيات BUs Hierarchy ===== */}
-      {activeTab === "bu" && buRecords.length > 0 && (() => {
-        const lvlCounts = levels.reduce((a, l) => ({ ...a, [l]: buRecords.filter(r => r.lvl === l).length }), {});
-        const totalEmp = buRecords.reduce((s, r) => s + parseFloat(r.emp_no || 0), 0);
-        const uniqueN1 = new Set(buRecords.map(r => r.n1).filter(Boolean)).size;
-        return (
-          <div style={S.statsGrid}>
-            <div style={S.statCard}><div style={S.statNum}>{buRecords.length}</div><div style={S.statLbl}>إجمالي السجلات</div></div>
-            <div style={S.statCard}><div style={S.statNum}>{uniqueN1}</div><div style={S.statLbl}>وحدات N-1 فريدة</div></div>
-            <div style={S.statCard}><div style={S.statNum}>{totalEmp.toLocaleString()}</div><div style={S.statLbl}>إجمالي الموظفين</div></div>
-            {levels.map(l => (
-              <div key={l} style={{ ...S.statCard, background: "#f0faf4" }}>
-                <div style={S.statNum}>{lvlCounts[l] || 0}</div>
-                <div style={S.statLbl}>المستوى {l}</div>
-              </div>
-            ))}
-          </div>
-        );
-      })()}
-
       {activeTab === "bu" && (
         <>
           <form onSubmit={handleSaveBU} style={S.form}>
@@ -262,6 +241,25 @@ const SystemInput = () => {
             </div>
             <button type="submit" style={S.submitBtn} disabled={loading}>{loading ? "..." : "\uD83D\uDCBE \u062d\u0641\u0638"}</button>
           </form>
+
+          {buRecords.length > 0 && (() => {
+            const lvlCounts = levels.reduce((a, l) => ({ ...a, [l]: buRecords.filter(r => r.lvl === l).length }), {});
+            const totalEmp = buRecords.reduce((s, r) => s + parseFloat(r.emp_no || 0), 0);
+            const uniqueN1 = new Set(buRecords.map(r => r.n1).filter(Boolean)).size;
+            return (
+              <div style={S.statsGrid}>
+                <div style={S.statCard}><div style={S.statNum}>{buRecords.length}</div><div style={S.statLbl}>إجمالي السجلات</div></div>
+                <div style={S.statCard}><div style={S.statNum}>{uniqueN1}</div><div style={S.statLbl}>وحدات N-1 فريدة</div></div>
+                <div style={S.statCard}><div style={S.statNum}>{totalEmp.toLocaleString()}</div><div style={S.statLbl}>إجمالي الموظفين</div></div>
+                {levels.map(l => (
+                  <div key={l} style={{ ...S.statCard, background: "#f0faf4" }}>
+                    <div style={S.statNum}>{lvlCounts[l] || 0}</div>
+                    <div style={S.statLbl}>المستوى {l}</div>
+                  </div>
+                ))}
+              </div>
+            );
+          })()}
 
           <div style={S.tableBox}>
             <div style={S.tableHdr}>
@@ -297,34 +295,6 @@ const SystemInput = () => {
           </div>
         </>
       )}
-      {/* ===== إحصائيات Impact Analysis ===== */}
-      {activeTab === "impact" && impactRecords.length > 0 && (() => {
-        const avgImpact = (impactRecords.reduce((s, r) => s + parseFloat(r.overall_impact || 0), 0) / impactRecords.length).toFixed(2);
-        const uniqueBUs = new Set(impactRecords.map(r => r.impacted_bu).filter(Boolean)).size;
-        const uniqueInit = new Set(impactRecords.map(r => r.initiative_id).filter(Boolean)).size;
-        const sectorCounts = impactRecords.reduce((a, r) => { if (r.sector) a[r.sector] = (a[r.sector] || 0) + 1; return a; }, {});
-        const topSectors = Object.entries(sectorCounts).sort((a, b) => b[1] - a[1]).slice(0, 3);
-        const highImpact = impactRecords.filter(r => parseFloat(r.overall_impact || 0) >= 70).length;
-        return (
-          <div style={S.statsGrid}>
-            <div style={S.statCard}><div style={S.statNum}>{impactRecords.length}</div><div style={S.statLbl}>إجمالي السجلات</div></div>
-            <div style={S.statCard}><div style={S.statNum}>{uniqueInit}</div><div style={S.statLbl}>مبادرات فريدة</div></div>
-            <div style={S.statCard}><div style={S.statNum}>{uniqueBUs}</div><div style={S.statLbl}>وحدات أعمال متأثرة</div></div>
-            <div style={S.statCard}><div style={S.statNum}>{avgImpact}%</div><div style={S.statLbl}>متوسط التأثير الكلي</div></div>
-            <div style={{ ...S.statCard, background: highImpact > 0 ? "#fff4f4" : "#f0faf4" }}>
-              <div style={{ ...S.statNum, color: highImpact > 0 ? "#c0392b" : "#006C35" }}>{highImpact}</div>
-              <div style={S.statLbl}>تأثير عالي (≥70%)</div>
-            </div>
-            {topSectors.map(([sec, cnt]) => (
-              <div key={sec} style={{ ...S.statCard, background: "#f0faf4" }}>
-                <div style={S.statNum}>{cnt}</div>
-                <div style={S.statLbl}>{sec}</div>
-              </div>
-            ))}
-          </div>
-        );
-      })()}
-
       {activeTab === "impact" && (
         <>
           <form onSubmit={handleSaveImpact} style={S.form}>
@@ -362,6 +332,33 @@ const SystemInput = () => {
             </div>
             <button type="submit" style={S.submitBtn} disabled={loading}>{loading ? "..." : "💾 حفظ"}</button>
           </form>
+
+          {impactRecords.length > 0 && (() => {
+            const avgImpact = (impactRecords.reduce((s, r) => s + parseFloat(r.overall_impact || 0), 0) / impactRecords.length).toFixed(2);
+            const uniqueBUs = new Set(impactRecords.map(r => r.impacted_bu).filter(Boolean)).size;
+            const uniqueInit = new Set(impactRecords.map(r => r.initiative_id).filter(Boolean)).size;
+            const sectorCounts = impactRecords.reduce((a, r) => { if (r.sector) a[r.sector] = (a[r.sector] || 0) + 1; return a; }, {});
+            const topSectors = Object.entries(sectorCounts).sort((a, b) => b[1] - a[1]).slice(0, 3);
+            const highImpact = impactRecords.filter(r => parseFloat(r.overall_impact || 0) >= 70).length;
+            return (
+              <div style={S.statsGrid}>
+                <div style={S.statCard}><div style={S.statNum}>{impactRecords.length}</div><div style={S.statLbl}>إجمالي السجلات</div></div>
+                <div style={S.statCard}><div style={S.statNum}>{uniqueInit}</div><div style={S.statLbl}>مبادرات فريدة</div></div>
+                <div style={S.statCard}><div style={S.statNum}>{uniqueBUs}</div><div style={S.statLbl}>وحدات أعمال متأثرة</div></div>
+                <div style={S.statCard}><div style={S.statNum}>{avgImpact}%</div><div style={S.statLbl}>متوسط التأثير الكلي</div></div>
+                <div style={{ ...S.statCard, background: highImpact > 0 ? "#fff4f4" : "#f0faf4" }}>
+                  <div style={{ ...S.statNum, color: highImpact > 0 ? "#c0392b" : "#006C35" }}>{highImpact}</div>
+                  <div style={S.statLbl}>تأثير عالي (≥70%)</div>
+                </div>
+                {topSectors.map(([sec, cnt]) => (
+                  <div key={sec} style={{ ...S.statCard, background: "#f0faf4" }}>
+                    <div style={S.statNum}>{cnt}</div>
+                    <div style={S.statLbl}>{sec}</div>
+                  </div>
+                ))}
+              </div>
+            );
+          })()}
 
           <div style={S.tableBox}>
             <div style={S.tableHdr}>
@@ -421,8 +418,8 @@ const S = {
   table: { width: "100%", borderCollapse: "collapse", fontSize: "14px" },
   th: { background: "#006C35", color: "white", padding: "10px 14px", textAlign: "right", whiteSpace: "nowrap" },
   td: { padding: "10px 14px", borderBottom: "1px solid #eee", textAlign: "right", whiteSpace: "nowrap" },
-  statsGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: "14px", marginBottom: "24px" },
-  statCard: { background: "white", borderRadius: "12px", padding: "16px 18px", boxShadow: "0 2px 8px rgba(0,0,0,0.07)", textAlign: "center", borderTop: "4px solid #006C35" },
+  statsGrid: { display: "flex", flexWrap: "wrap", gap: "14px", marginBottom: "24px", justifyContent: "center" },
+  statCard: { background: "white", borderRadius: "12px", padding: "16px 18px", boxShadow: "0 2px 8px rgba(0,0,0,0.07)", textAlign: "center", borderTop: "4px solid #006C35", minWidth: "140px", flex: "0 0 auto" },
   statNum: { fontSize: "28px", fontWeight: "bold", color: "#006C35", marginBottom: "4px" },
   statLbl: { fontSize: "12px", color: "#666", fontWeight: "bold" },
 };
